@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfhuf117drxf0"]
+
+[ext_resource type="Script" path="res://src/actors/pacman.gd" id="1_g5njn"]
+[ext_resource type="Texture2D" uid="uid://ohy0axvap5gh" path="res://assets/pac-man.png" id="1_u5bk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wn0g0"]
+size = Vector2(16, 16)
+
+[node name="Pacman" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_g5njn")
+
+[node name="Pac-man" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("1_u5bk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wn0g0")
